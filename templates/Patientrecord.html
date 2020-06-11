@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title%}
+  Home
+{% endblock%}
+  {% load static %}
+{% block css %}
+  <link rel="stylesheet" href={% static 'patientrecord.css'%} type="text/css">
+{% endblock css %}
+
+{% block content %}
+
+<div class="main_contaner">
+  <div class="side_bar">
+    <div class="image">
+      <img src="{% static 'img.png' %}" alt="Profile image" class="img">
+    </div>
+    <h3>{{key1}}</h3>
+    <p class="ll">{{key2}}</p>
+    <h6>Gender : {{key3}}</h6>
+    <h6>City : {{key4}}</h6>
+    <h6>DOB : {{key5}}</h6>
+  </div>
+  <div class="content_bar">
+    <a href="/Patient/{{key2}}"><h4>Blood Diagnostic Records</h4></a>
+    <a href="#"><h4>Past Doctor Visits</h4></a>
+    <a href="#"><h4>Past Doctor Records</h4></a>
+  </div>
+</div>
+
+
+{% endblock content %}

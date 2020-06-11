@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title%}
+  Home
+{% endblock%}
+  {% load static %}
+{% block css %}
+  <link rel="stylesheet" href={% static 'home.css'%} type="text/css">
+{% endblock css %}
+
+{% block content %}
+
+<div class="main_contaner">
+  <form class="" action="/Patient" method="get">
+    <div class="inputbox">
+      <table>
+        <tr>
+          <div class="name">
+            <td><label>Name</label></td>
+            <td></td>
+            <td class="tdp"><input type="text" name="name" value="" placeholder="Neeraj" class="inp"></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="gender">
+            <td><label>Gender</label></td>
+            <td></td>
+            <td class="tdp"><input type="text" name="gender" value="" placeholder="Male" class="inp" ></td>
+          </div>
+        </tr>
+      </table>
+    </div>
+    <div class="buton">
+      <input type="submit" name="" value="Search"  class="btn">
+      <a href="/Patient" class="btn">Get all Patient</a>
+    </div>
+  </form>
+
+</div>
+
+
+
+{% endblock content %}
